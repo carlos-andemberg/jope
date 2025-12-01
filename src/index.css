@@ -1,0 +1,225 @@
+:root {
+  /* Paleta JOPE x SHADOW */
+  --color-primary: #FFD700;
+  /* Amarelo pedido */
+  --color-background: #121212;
+  /* Fundo Shadow */
+  --color-surface: #1E1E1E;
+  /* Cartões */
+  --color-accent: #DC2626;
+  /* Vermelho Shadow */
+  --color-text-main: #F3F4F6;
+  --color-text-muted: #9CA3AF;
+
+  /* Fontes (Sugestão: Importar 'Orbitron' ou 'Roboto' do Google Fonts) */
+  --font-main: 'Orbitron', sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-background);
+  color: var(--color-text-main);
+  font-family: var(--font-main);
+}
+
+/* Utilitários rápidos */
+.text-yellow {
+  color: var(--color-primary);
+}
+
+.text-red {
+  color: var(--color-accent);
+}
+
+.bg-surface {
+  background-color: var(--color-surface);
+}
+
+button {
+  background-color: var(--color-primary);
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px var(--color-primary);
+  /* Efeito neon */
+}
+
+/* --- Estilos da Hero Section (Cabeçalho) --- */
+
+.hero-section {
+  /* Transforma em uma linha flexível */
+  display: flex;
+  /* Alinha verticalmente no centro */
+  align-items: center;
+  /* Espaço entre o texto e a imagem */
+  gap: 40px;
+  padding: 60px 20px;
+  border-bottom: 2px solid var(--color-primary);
+  /* Limita a largura para não ficar muito esticado em telas grandes */
+  max-width: 1100px;
+  margin: 0 auto;
+  /* Centraliza o container na tela */
+}
+
+.hero-content {
+  /* O texto ocupa o espaço disponível (e.g., 60%) */
+  flex: 1;
+  text-align: left;
+  /* Alinha texto à esquerda para combinar com a imagem à direita */
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin: 0 0 10px 0;
+  line-height: 1.1;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: var(--color-text-muted);
+  margin-bottom: 30px;
+  max-width: 500px;
+  /* Evita que o texto fique muito largo */
+}
+
+.hero-image-container {
+  /* A imagem ocupa um espaço menor (e.g., 40%) */
+  flex: 0.8;
+  display: flex;
+  justify-content: center;
+  /* Centraliza horizontalmente */
+  align-items: center;
+}
+
+.mascote-image {
+  width: 100%;
+  /* Responsivo */
+  max-width: 350px;
+  /* Tamanho máximo do Shadow */
+  height: auto;
+  /* Adiciona o brilho amarelo para integrar com o tema */
+  filter: drop-shadow(0 0 15px var(--color-primary));
+  /* Uma leve animação para ele "flutuar" (opcional) */
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+
+/* --- Responsividade (Celular) --- */
+/* Quando a tela for menor que 768px, muda o layout */
+@media (max-width: 768px) {
+  .hero-section {
+    /* Muda de linha para coluna */
+    flex-direction: column-reverse;
+    /* column-reverse coloca a imagem EM CIMA do texto no celular.
+       Se preferir a imagem embaixo, use apenas 'column'. */
+    text-align: center;
+    gap: 20px;
+    padding: 40px 20px;
+  }
+
+  .hero-content {
+    text-align: center;
+    /* Centraliza o texto de volta no celular */
+  }
+
+  .hero-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* --- Links do Rodapé --- */
+.footer-link {
+  text-decoration: none;
+  /* Tira o sublinhado padrão */
+  color: var(--color-text-main);
+  /* Usa a cor branca do site */
+  transition: transform 0.2s, opacity 0.2s;
+  /* Animação suave */
+  display: inline-block;
+  /* Permite a animação de escala funcionar */
+}
+
+.footer-link:hover {
+  transform: scale(1.1);
+  /* Aumenta um pouquinho ao passar o mouse */
+  opacity: 0.8;
+  /* Fica levemente transparente */
+  cursor: pointer;
+}
+
+/* Garante que o número amarelo continue amarelo mesmo dentro do link */
+.footer-link .text-yellow {
+  color: var(--color-primary);
+}
+
+/* --- Grid de Serviços --- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  /* Responsivo automático */
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.service-card {
+  background-color: var(--color-surface);
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 25px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efeito ao passar o mouse (Hover) */
+.service-card:hover {
+  transform: translateY(-5px);
+  /* Sobe um pouquinho */
+  border-color: var(--color-primary);
+  /* Borda fica Amarela */
+  box-shadow: 0 5px 20px rgba(255, 215, 0, 0.15);
+  /* Brilho Amarelo fraco */
+}
+
+/* Títulos dos cards */
+.service-card h3 {
+  margin-top: 0;
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+}
+
+/* Destaque de Preço */
+.price-tag {
+  display: inline-block;
+  background-color: rgba(255, 215, 0, 0.1);
+  /* Fundo amarelo transparente */
+  color: var(--color-primary);
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-top: 10px;
+}
