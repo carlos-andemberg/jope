@@ -142,6 +142,20 @@ function App() {
           </a>
 
           <p style={{ fontSize: '0.8rem', color: '#666', marginTop: '10px' }}>Rio Largo - AL</p>
+
+          <p style={{ fontSize: '0.7rem', color: '#444', marginTop: '20px' }}>
+            Desenvolvido por <a
+              href="https://carlosandemberg.com.br"
+              target="_blank"
+              rel="noreferrer"
+              style={{ color: '#777', textDecoration: 'none', fontWeight: 'bold' }}
+              onMouseOver={(e) => e.target.style.color = 'var(--color-primary)'}
+              onMouseOut={(e) => e.target.style.color = '#777'}
+            >
+              Carlos Andemberg
+            </a>
+          </p>
+
         </div>
       </footer>
     </div>
