@@ -79,7 +79,7 @@ function App() {
           {/* Card 3: Serviços Rápidos */}
           <div className="service-card">
             <div style={{ fontSize: '3rem', marginBottom: '10px' }}>⚡</div>
-            <h3>Serviços</h3>
+            <h3>Conveniência</h3>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
 
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
