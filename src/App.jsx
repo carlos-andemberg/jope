@@ -60,6 +60,7 @@ function App() {
             <ul style={{ paddingLeft: '20px', color: '#ccc', lineHeight: '1.6' }}>
               <li>Curso de Informática</li>
               <li>Windows 10</li>
+              <li>Apostilas de estudo</li>
             </ul>
           </div>
 
@@ -112,7 +113,7 @@ function App() {
           </div>
           <div>
             <strong>Sáb, Dom e Feriado</strong><br />
-            09:00 às 21:30
+            09:00 às 21:00
           </div>
         </div>
 
